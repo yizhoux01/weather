@@ -1,0 +1,2 @@
+# weather
+print weather condition
