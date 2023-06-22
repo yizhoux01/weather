@@ -1,0 +1,16 @@
+/**
+ * Function to print the current weather
+ * @returns {string} The current weather
+ */
+function printWeather() {
+    // Get the current weather from an API
+    const weather = fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=YOUR_API_KEY')
+        .then(response => response.json())
+        .then(data => data.weather[0].main);
+
+    // Print the current weather
+    console.log(`The current weather is: ${weather}`);
+
+    // Return the current weather
+    return weather;
+}
